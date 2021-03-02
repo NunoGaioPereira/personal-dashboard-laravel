@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TrackCounterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,10 @@ Auth::routes();
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::resource('/trackers', TrackCounterController::class);
+// Route::get('/trackers', 'App\Http\Controllers\TrackCounterController@index');
+
+// Route::group(['middleware' => ['auth']], function() {
+//     Route::resource('trackers', [TrackCounterController::class, 'index']);
+// });
+//Auth::routes(['verify' => true]);
