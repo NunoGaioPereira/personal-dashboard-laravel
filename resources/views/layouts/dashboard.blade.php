@@ -16,11 +16,13 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
     @yield('headers')
+    @livewireStyles
 </head>
 <body class="bg-gray-100 h-screen antialiased leading-none font-sans">
     <div id="app">
         @yield('content')
     </div>
     @yield('scripts')
+    @livewireScripts
 </body>
 </html>

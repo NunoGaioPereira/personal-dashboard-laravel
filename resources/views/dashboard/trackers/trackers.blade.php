@@ -19,9 +19,7 @@
     
     <div>
         @foreach($trackers as $tracker)
-            <div class="bg-white p-10 shadow w-1/4">
-                {{ $tracker->title }}
-            </div>
+            <livewire:tracker-counter :tracker=$tracker />
         @endforeach
     </div>
 
